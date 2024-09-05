@@ -1,0 +1,14 @@
+[package]
+name = "hf_tokenizers"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["staticlib"]
+
+[dependencies]
+cxx = "1.0"
+tokenizers = { version = "0.20", default-features = false, features = ["onig", "esaxx_fast"] }
+
+[build-dependencies]
+cxx-build = "1.0"
